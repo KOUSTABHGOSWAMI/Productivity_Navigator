@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(6, 149, 6);
+}
+
+h1 {
+    margin-top: 5vh;
+    color: #f3f3f3;
+}
+
+#container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 12px;
+    /* border: 1px solid #e5e5e5; */
+}
+
+ul li {
+    padding: 10px;
+    /* padding-left: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+ul li:hover {
+    background: rgb(87, 175, 87);
+    box-shadow: 0px 0px 5px 1px rgb(9, 76, 9);
+}
+
+#list input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+#list label {
+    position: relative;
+    cursor: pointer;
+}
+
+#list label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#list input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#list input:checked+label:before {
+    background: white;
+}
+
+#list input:checked+label {
+    text-decoration: line-through;
+}
+
+.delete {
+    height: 28px;
+    padding: 5px 0px;
+    border-radius: 3px;
+}
+
+.delete:hover {
+    background: white;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+.add-task {
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 11px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 10px;
+}
+
+#total-tasks,
+#tasks-counter {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-left: 2px;
+    color: rgb(225, 219, 219);
+}
